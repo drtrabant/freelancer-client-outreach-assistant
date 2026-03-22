@@ -1,0 +1,286 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Warm neutrals */
+  --color-cream: #FAF8F5;
+  --color-cream-dark: #F3EFE9;
+  --color-warm-white: #FEFDFB;
+  --color-warm-gray-50: #F9F7F4;
+  --color-warm-gray-100: #F0ECE6;
+  --color-warm-gray-200: #E2DBD1;
+  --color-warm-gray-300: #CFC5B8;
+  --color-warm-gray-400: #B0A494;
+  --color-warm-gray-500: #918272;
+  --color-warm-gray-600: #756758;
+  --color-warm-gray-700: #5C5047;
+  --color-warm-gray-800: #443B34;
+  --color-warm-gray-900: #2D2622;
+  --color-warm-gray-950: #1A1512;
+
+  /* Primary – a grounded, confident warm tone */
+  --color-primary-50: #FDF6EE;
+  --color-primary-100: #FAEAD4;
+  --color-primary-200: #F4D2A8;
+  --color-primary-300: #EDB872;
+  --color-primary-400: #E59A3E;
+  --color-primary-500: #D4841E;
+  --color-primary-600: #B86A15;
+  --color-primary-700: #995214;
+  --color-primary-800: #7D4218;
+  --color-primary-900: #673716;
+
+  /* Accent – calm confidence, like a clear sky after worry */
+  --color-accent-50: #F0F7FA;
+  --color-accent-100: #DAEdf3;
+  --color-accent-200: #B9DCE9;
+  --color-accent-300: #89C4D9;
+  --color-accent-400: #53A5C2;
+  --color-accent-500: #3889A7;
+  --color-accent-600: #316F8D;
+  --color-accent-700: #2D5B74;
+  --color-accent-800: #2C4D61;
+  --color-accent-900: #294152;
+
+  /* Success – gentle, not screaming green */
+  --color-success-50: #F2F9F2;
+  --color-success-100: #E0F1E0;
+  --color-success-200: #C3E3C3;
+  --color-success-300: #96CD96;
+  --color-success-400: #62AF62;
+  --color-success-500: #3F943F;
+  --color-success-600: #2F772F;
+  --color-success-700: #285F28;
+  --color-success-800: #244C24;
+  --color-success-900: #1F3F1F;
+
+  /* Warning – warm amber, not alarming */
+  --color-warning-50: #FFFBEB;
+  --color-warning-100: #FFF3C4;
+  --color-warning-200: #FFE484;
+  --color-warning-300: #FFD044;
+  --color-warning-400: #FFBD11;
+  --color-warning-500: #F09E04;
+  --color-warning-600: #CC7902;
+  --color-warning-700: #A35505;
+  --color-warning-800: #86420D;
+  --color-warning-900: #72360F;
+
+  /* Error – soft, not panicky */
+  --color-error-50: #FEF5F3;
+  --color-error-100: #FDE8E3;
+  --color-error-200: #FCD5CC;
+  --color-error-300: #F9B5A7;
+  --color-error-400: #F38B74;
+  --color-error-500: #E86A4E;
+  --color-error-600: #D44D30;
+  --color-error-700: #B23E24;
+  --color-error-800: #933622;
+  --color-error-900: #7A3222;
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    sans-serif;
+  --font-serif: 'Newsreader', 'Georgia', 'Times New Roman', serif;
+
+  /* Spacing rhythm */
+  --space-unit: 0.25rem;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Shadows – warm-tinted, soft */
+  --shadow-sm: 0 1px 2px 0 rgba(45, 38, 34, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(45, 38, 34, 0.06),
+    0 2px 4px -2px rgba(45, 38, 34, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(45, 38, 34, 0.07),
+    0 4px 6px -4px rgba(45, 38, 34, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(45, 38, 34, 0.08),
+    0 8px 10px -6px rgba(45, 38, 34, 0.04);
+
+  /* Border radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-cream);
+    color: var(--color-warm-gray-900);
+    line-height: 1.7;
+    letter-spacing: -0.011em;
+    min-height: 100dvh;
+  }
+
+  /* Typography scale with generous spacing */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--color-warm-gray-950);
+  }
+
+  h1 {
+    font-size: clamp(1.875rem, 4vw, 2.75rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 3vw, 2.125rem);
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 2.5vw, 1.625rem);
+    line-height: 1.25;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+  }
+
+  h5 {
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-warm-gray-500);
+  }
+
+  p {
+    line-height: 1.7;
+    letter-spacing: -0.011em;
+    color: var(--color-warm-gray-700);
+  }
+
+  a {
+    color: var(--color-accent-600);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  a:hover {
+    color: var(--color-accent-700);
+  }
+
+  /* Focus styles – visible, warm, accessible */
+  :focus-visible {
+    outline: 2px solid var(--color-accent-400);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Smooth, warm selection color */
+  ::selection {
+    background-color: var(--color-primary-200);
+    color: var(--color-warm-gray-900);
+  }
+
+  /* Reduce motion for those who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Form elements base */
+  input,
+  textarea,
+  select {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: -0.011em;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-warm-gray-400);
+    opacity: 1;
+  }
+
+  /* Scrollbar styling – subtle, warm */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-warm-gray-300);
+    border-radius: var(--radius-full);
+    border: 2px solid var(--color-cream);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-warm-gray-400);
+  }
+}
+
+@layer components {
+  /* Card – the primary content container */
+  .card {
+    background-color: var(--color-warm-white);
+    border: 1px solid var(--color-warm-gray-100);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Button base – calm, confident, not aggressive */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height

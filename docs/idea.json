@@ -1,0 +1,19 @@
+{
+  "id": "freelancer-client-outreach-assistant",
+  "title": "Freelancer Client Outreach Assistant",
+  "problem_statement": "Freelancers are paralyzed by cold outreach to potential clients, finding it emotionally difficult and lacking confidence in messaging, even when they're skilled at the actual work.",
+  "target_user": "Freelancers and independent consultants who need to acquire new clients",
+  "scores": {
+    "market_size": 8,
+    "revenue_potential": 7,
+    "opportunity": 7,
+    "ad_spend_indicator": 6
+  },
+  "composite_score": 7,
+  "source_url": "https://reddit.com/r/freelance/comments/1ra6xyf/anyone_else_completely_paralyzed_by_client/",
+  "reasoning": "With 67 upvotes and 79 comments, this is a deeply felt pain point across millions of freelancers globally. An AI-powered tool that generates personalized, industry-specific outreach messages, provides confidence-building scripts, and automates follow-ups could command $20-50/mo. Existing tools like Instantly and Lemlist focus on sales teams, not freelancer-specific workflows and emotional barriers.",
+  "competition_score": 8,
+  "competition_density": "low",
+  "trend_momentum": 5,
+  "trend_direction": "down"
+}
